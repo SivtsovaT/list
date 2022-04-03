@@ -1,0 +1,10 @@
+.person__container {
+    border: blueviolet 2px solid;
+    background-color: #bfd999;
+    margin: 10px;
+}
+
+.person__wrapper {
+    display: flex;
+    justify-content: space-around;
+}
