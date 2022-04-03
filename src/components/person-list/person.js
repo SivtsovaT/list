@@ -1,23 +1,16 @@
 import React from "react";
 import '../person-list/person.css'
+import PersonDate from "./person-date/PersonDate";
+import PersonName from "./person-name/PersonName";
+import PersonAge from "./person-age/PersonAge";
 
 const Person = (props) => {
-    const month = props.date.toLocaleString('en-US', {month: 'long'});
-    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
-    const year = props.date.getFullYear();
+
     return (
         <div className="person__container">
-
-            <div className="person__wrapper">
-                <div>
-                    <div>{month}</div>
-                    <div>{day}</div>
-                    <div>{year}</div>
-                </div>
-                <div>{props.name}</div>
-                <div>{props.age}</div>
-            </div>
-
+            <PersonDate date={props.date}></PersonDate>
+            <PersonName name={props.name}></PersonName>
+            <PersonAge age={props.age}></PersonAge>
         </div>
     )
 }
