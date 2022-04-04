@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Person from "./components/person-list/person";
 import PersonItem from "./components/person-list/person-list-item/PersonItem";
+import NewPerson from "./components/form/NewPerson";
 
 const App = () => {
     const friend = [
@@ -30,7 +31,7 @@ const App = () => {
     ];
     return (
         <div>
-            <h2>This is person list</h2>
+            <NewPerson></NewPerson>
             <PersonItem items={friend}></PersonItem>
         </div>
     );
