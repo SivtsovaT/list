@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Person from "./components/person-list/person";
+import PersonItem from "./components/person-list/person-list-item/PersonItem";
 
 const App = () => {
     const friend = [
@@ -30,9 +31,7 @@ const App = () => {
     return (
         <div>
             <h2>This is person list</h2>
-            <Person date={friend[0].date} name={friend[0].name} age={friend[0].age}></Person>
-            <Person date={friend[1].date} name={friend[1].name} age={friend[1].age}></Person>
-            <Person date={friend[2].date} name={friend[2].name} age={friend[2].age}></Person>
+            <PersonItem items={friend}></PersonItem>
         </div>
     );
 }
