@@ -6,6 +6,7 @@ const PersonDate = (props) => {
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});
     const year = props.date.getFullYear();
 
+
     return (
         <div className='date'>
             <div>{month}</div>
