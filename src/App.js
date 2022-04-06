@@ -29,10 +29,16 @@ const App = () => {
 
 
     ];
+    const addPersonHandler = friend => {
+        console.log('In App.js');
+        console.log(friend);
+    };
+
+
     return (
         <div>
-            <NewPerson></NewPerson>
-            <PersonItem items={friend}></PersonItem>
+            <NewPerson onAddPerson={addPersonHandler} />
+            <PersonItem items={friend} />
         </div>
     );
 }
